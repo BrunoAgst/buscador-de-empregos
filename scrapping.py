@@ -42,3 +42,35 @@ def scraping_vagas(job, state):
         list_jobs.append(job_descript)
 
     return list_jobs
+    
+def scrapping_catho(job, state):
+    list_jobs = []
+
+    url = f"https://www.catho.com.br/vagas/{job}/{state}/&page=1&order=dataAtualizacao"
+
+    driver.get(url)
+    sleep(5)
+
+    btn_cookie = driver.find_element_by_xpath('//*[@id="__next"]/div[4]/section/div/div/div[2]/div/button')
+    btn_cookie.click()
+    sleep(5)
+    try:
+        while True:
+            
+            jobs = driver.find_elements_by_class_name('sc-bbmXgH')
+            
+            for job in jobs:
+                job_descript = {
+                    'cargo': f"{job.find_element_by_tag_name('h2').text}", 
+                    'local': f"{job.find_element_by_class_name('sc-TOsTZ').text}",
+                    'data': f"{job.find_element_by_class_name('sc-caSCKo').text}"
+                }
+                list_jobs.append(job_descript)
+            
+            btn_next = driver.find_element_by_xpath('/html/body/div[1]/div[3]/main/div[3]/div/div/section/nav/a[7]')
+            btn_next.click()
+            sleep(5)
+    except:
+        pass
+
+    return list_jobs

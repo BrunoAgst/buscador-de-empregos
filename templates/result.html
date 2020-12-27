@@ -6,6 +6,13 @@
     <title>Resultado</title>
 </head>
 <body>
-    <p>{{jobs}}</p>
+    {% for job in jobs %}
+    <div>
+        <h2>Cargo: {{job.cargo}}</h2>
+        <h3>Empresa: {{job.empresa}}</h3>
+        <h3>Nível: {{job.nivel}}</h3>
+    </div>
+    <br>
+    {% endfor %}
 </body>
 </html>

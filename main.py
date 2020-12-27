@@ -13,11 +13,12 @@ def search():
     job = request.args.get('job')
     local = request.args.get('local')
     
+    
     if local == None or local == "":
         local = 'brasil'
     else:
-        local = local.replace(" ", "-")
-        job = job.replace(" ", "-")
+        local = local.replace(" ", "-").lower()
+        job = job.replace(" ", "-").lower()
 
     list_jobs = scraping_vagas(job, local)
     
