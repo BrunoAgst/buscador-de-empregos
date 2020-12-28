@@ -43,10 +43,10 @@ def scraping_vagas(job, state):
 
     return list_jobs
     
-def scrapping_catho(job, state):
+def scrapping_catho(job, state, sigla):
     list_jobs = []
 
-    url = f"https://www.catho.com.br/vagas/{job}/{state}/&page=1&order=dataAtualizacao"
+    url = f"https://www.catho.com.br/vagas/{job}/{state}-{sigla}/&page=1&order=dataAtualizacao"
 
     driver.get(url)
     sleep(5)
