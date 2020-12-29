@@ -15,11 +15,9 @@ def search():
     sigla = request.form['siglas']
     site = request.form['site']
 
-    if local == None or local == "":
-        local = 'brasil'
-    else:
-        local = local.replace(" ", "-").lower()
-        job = job.replace(" ", "-").lower()
+    
+    local = local.replace(" ", "-").lower()
+    job = job.replace(" ", "-").lower()
     
     list_jobs = []
 

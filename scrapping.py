@@ -45,7 +45,7 @@ def scraping_vagas(job, state):
     
 def scrapping_catho(job, state, sigla):
     list_jobs = []
-
+    
     url = f"https://www.catho.com.br/vagas/{job}/{state}-{sigla}/&page=1&order=dataAtualizacao"
 
     driver.get(url)

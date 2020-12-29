@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
     <title>Resultado</title>
 </head>
 <body>
     {% for job in jobs %}
     <div>
-        {% if site == catho %}
-        <h2>Cargo: {{job.cargo}}</h2>
-        <h3>Empresa: {{job.empresa}}</h3>
-        <h3>Nível: {{job.nivel}}</h3>
-        {% else %}
+        {% if site == 'catho' %}
         <h2>Cargo: {{job.cargo}}</h2>
         <h3>Local: {{job.local}}</h3>
         <h3>Data: {{job.data}}</h3>
+        {% else %}
+        <h2>Cargo: {{job.cargo}}</h2>
+        <h3>Empresa: {{job.empresa}}</h3>
+        <h3>Nivel: {{job.nivel}}</h3>
         {% endif %}
     </div>
     <br>

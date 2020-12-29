@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css') }}">
     <title>Buscador de empregos</title>
 </head>
 <body>
     <form action="/search" method="post">
         <h1>Buscador de Emprego</h1>
-        <input type="text" name="job" placeholder="Exemplo: Analista de Sistemas" required/><br>
-        <input type="text" name="local" placeholder="Exemplo: São Paulo" required><br>
-        <select name='siglas' required>
+        <input type="text" id="job" name="job" placeholder="Exemplo: Analista de Sistemas" required checked/><br>
+        <input type="text" id="local" name="local" placeholder="Exemplo: São Paulo" required><br>
+        <select name='siglas' id="siglas" required>
             <option value="ac">AC</option>
             <option value="al">AL</option>
             <option value="am">AM</option>
@@ -40,10 +41,9 @@
             <option value="to">TO</option>
         </select>
         <p>Selecione o site desejado:</p>
-        <input type="radio" name="site" value="vagas" checked><label>Vagas</label><br>
-        <input type="radio" name="site" value="catho"><label>Catho</label>
-        <br><br>
-        <button>Buscar</button>
+        <input type="radio" id="site" name="site" value="vagas" checked><label id="l-vagas">Vagas</label><br>
+        <input type="radio" id="site "name="site" value="catho"><label id="l-catho">Catho</label><br>
+        <button id="button">Buscar</button>
     </form>
 </body>
 </html>

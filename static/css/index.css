@@ -1,0 +1,60 @@
+body{
+    text-align: center;
+    width: 100%;
+    margin-top: 10%;
+    color: lightgray;
+}
+h1{
+    color:lightskyblue;
+    font-size: 70px;
+    text-shadow: 2px 2px 2px lightslategray;
+
+}
+
+#job{
+    width: 15%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+select{
+    padding: 5px;
+}
+
+#l-vagas{
+    font-size: 20px;
+}
+
+#l-catho{
+    font-size: 20px;
+}
+
+#local{
+    width: 15%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: black;
+    font-size: 20px;
+}
+
+label{
+    color: black;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px;
+    border: 0;
+    background-color: lightskyblue;
+    color: white;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
